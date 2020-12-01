@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://gitee.com/SamWu129/jd_scripts.git ~/Clone202012/jd_scripts
+          git clone https://gitee.com/lxk0301/jd_scripts.git ~/Clone202012/jd_scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -35,7 +35,6 @@ jobs:
           cd ~/Clone202012/jd_scripts
           node jd_bean_change.js
         env:
-          
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
