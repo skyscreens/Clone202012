@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/799953468/Quantumult-X/tree/master/Scripts/JD.git ~/Clone202012/jd_scripts
+          git clone https://github.com/799953468/Quantumult-X.git ~/Clone202012/jd_scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -33,7 +33,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/Clone202012/jd_scripts
-          node jd_baiTiao.js
+          node Scripts/JD/jd_baiTiao.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
