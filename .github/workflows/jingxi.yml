@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Sunert/Scripts/blob/master/Task.git ~/Clone202012/jd_scripts
+          git clone https://github.com/Sunert/Scripts/task.git ~/Clone202012/jd_scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
