@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/Sunert/Scripts/Task.git ~/Clone202012/jd_scripts
+          git clone https://github.com/Sunert/Scripts.git ~/Clone202012/jd_scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -33,7 +33,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/Clone202012/jd_scripts
-          node jingxi.js
+          node /Taskjingxi.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
