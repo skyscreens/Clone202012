@@ -17,9 +17,6 @@ jobs:
     env:
         JD_COOKIE: ${{ secrets.JD_COOKIE }}        
     steps:
-      - name: Checkout
-        run: |
-          git clone https://github.com/whyour/hundun.git ~/Clone202012/jd_scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -33,7 +30,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/Clone202012/jd_scripts
-          node quanx/jx_story.js
+          node jx_story.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
