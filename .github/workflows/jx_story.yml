@@ -6,7 +6,7 @@ name: jx_story
 on:
   workflow_dispatch:
   schedule:
-     - cron: '28 */2 * * *'
+     - cron: '30 0 * * *'
   watch:
     types: started
 
@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/SamWu129/Clone202012.git ~/Clone202012
+          git clone https://gitee.com/lxk0301/jd_scripts.git ~/Clone202012/jd_scripts
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -33,7 +33,7 @@ jobs:
         if: env.JD_COOKIE
         run: |
           cd ~/Clone202012/jd_scripts
-          node jx_story.js
+          node jd_jxstory.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
