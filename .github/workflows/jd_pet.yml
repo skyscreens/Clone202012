@@ -4,9 +4,9 @@
 name: jd_pet
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:4
   schedule:
-     - cron: '40 0,5,11 * * *'
+     - cron: '40 23,5,10 * * *'
   watch:
     types: started
 
